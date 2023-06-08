@@ -38,6 +38,15 @@ dependencies:
   flutter_map: ^4.0.0
   latlong2: ^0.8.1
   url_launcher: ^6.1.11
+  http: ^0.13.6
+  shared_preferences: ^2.1.1
+  json_annotation: ^4.8.1
+  image_picker: ^0.8.7+5
+  geolocator: ^9.0.2
+  carousel_slider: ^4.2.1
+  image_grid: ^0.0.7+3
+  flutter_map_marker_popup: ^5.1.0
+  flutter_map_location_marker: ^6.0.0
 
 dev_dependencies:
   flutter_test:

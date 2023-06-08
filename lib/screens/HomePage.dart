@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project1/bottombar.dart';
-import 'package:project1/loginn.dart';
+import 'package:project1/screens/bottomBar.dart';
+import 'package:project1/screens/loginPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -43,12 +43,12 @@ class HomePage extends StatelessWidget {
           backgroundColor: Colors.transparent,
           elevation: 0,
           titleSpacing: 0,
-          leading: isLargeScreen
+          /*leading: isLargeScreen
               ? null
               : IconButton(
             icon: const Icon(Icons.menu),
             onPressed: () => _scaffoldKey.currentState?.openDrawer(),
-          ),
+          ),*/
           title: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Row(
@@ -59,7 +59,7 @@ class HomePage extends StatelessWidget {
                   style: TextStyle(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
-                if (isLargeScreen) Expanded(child: _navBarItems())
+                ///if (isLargeScreen) Expanded(child: _navBarItems())
               ],
             ),
           ),
@@ -70,14 +70,14 @@ class HomePage extends StatelessWidget {
             )
           ],
         ),
-        drawer: isLargeScreen ? null : _drawer(),
+        ///drawer: isLargeScreen ? null : _drawer(),
         body: BottomNav(),
       ),
 
     );
   }
 
-Widget _drawer() => Drawer(
+/*Widget _drawer() => Drawer(
     child: ListView(
       children: _menuItems
           .map((item) => ListTile(
@@ -90,8 +90,8 @@ Widget _drawer() => Drawer(
           .toList(),
     ),
   );
-
-  Widget _navBarItems() => Row(
+*/
+  /*Widget _navBarItems() => Row(
     mainAxisAlignment: MainAxisAlignment.end,
     crossAxisAlignment: CrossAxisAlignment.center,
     children: _menuItems
@@ -109,7 +109,7 @@ Widget _drawer() => Drawer(
       ),
     )
         .toList(),
-  );
+  );*/
 }
 
 final List<String> _menuItems = <String>[
@@ -124,14 +124,18 @@ class _ProfileIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<Menu>(
-        icon: const Icon(Icons.person),
+        icon: const Icon(Icons.menu),
         offset: const Offset(0, 40),
-        onSelected: (Menu item) {},
+        onSelected: (Menu item) {
+          Navigator.push(context, MaterialPageRoute(builder:(context) => Login()));
+        },
         itemBuilder: (BuildContext context) => <PopupMenuEntry<Menu>>[
-          /*const PopupMenuItem<Menu>(
+          const PopupMenuItem<Menu>(
             value: Menu.itemOne,
-            child: Text('Profile'),
-          ),*/
+            child: Text('Sign Out'),
+
+            
+          ),
         ]);
   }
 }
