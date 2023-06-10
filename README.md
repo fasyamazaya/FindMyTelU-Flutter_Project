@@ -1,16 +1,29 @@
-# project1
+# FindMyTelU Flutter Version
 
-A new Flutter project.
+This project were transform [FindMyTelU Laravel Version](https://github.com/fasyamazaya/FindMyTelU-PHP_Project) into Flutter Version
+Not connected into Laravel version
 
-## Getting Started
+## Purposes
+Due to course project assignment "Aplikasi Berbasis Web" in semester 6 = Create website related to the campus environment using HTML, Javascript, css, bootstrap, and so on.
 
-This project is a starting point for a Flutter application.
+## Pages
+- Login and Register Page
+- Home Page (Maps and Places)
+- Maps Page
+- Places Page
+- Detail Places Page
+- Bottom Bar
 
-A few resources to get you started if this is your first Flutter project:
+## Preview
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Dependencies
+- [http](https://pub.dev/packages/http)
+- [flutter_map](https://pub.dev/packages/flutter_map)
+- [flutter_map_marker_popup](https://pub.dev/packages/flutter_map_marker_popup)
+- [image_picker](https://pub.dev/packages/image_picker)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## How To Run It
+
+- Git clone this repository
+- Get Dependencies
+- 
